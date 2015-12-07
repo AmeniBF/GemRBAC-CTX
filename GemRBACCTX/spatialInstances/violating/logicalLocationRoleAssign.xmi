@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RBACmodel:Root
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:RBACmodel="http://www.example.org/RBACmodel"
+    xsi:schemaLocation="http://www.example.org/RBACmodel ../../model/RBACmodel.ecore">
+  <sys currentT="//@c.0/@timeexpression.0/@absolute.0"/>
+  <Obj idObject="obj1" permissions="//@p.0"/>
+  <Obj idObject="obj2" permissions="//@p.1"/>
+  <Obj idObject="obj3" permissions="//@p.2"/>
+  <op idOperation="op1" permissions="//@p.0"/>
+  <op idOperation="op2" permissions="//@p.0 //@p.1"/>
+  <op idOperation="op3" permissions="//@p.2"/>
+  <c xsi:type="RBACmodel:TemporalContext" idContext="currentT">
+    <timeexpression>
+      <absolute xsi:type="RBACmodel:TimePoint" idTimePoint="current" hour="8" day="1" month="1" year="2015"/>
+    </timeexpression>
+  </c>
+  <c xsi:type="RBACmodel:TemporalContext" p1="//@p.0" idContext="T1">
+    <timeexpression>
+      <absolute xsi:type="RBACmodel:TimeInterval" idTimeInterval="timer1">
+        <start idTimePoint="start1" hour="8" day="1" month="1" year="2015"/>
+        <end idTimePoint="end1" day="3" month="3" year="2017"/>
+      </absolute>
+    </timeexpression>
+  </c>
+  <c xsi:type="RBACmodel:SpatialContext" idContext="posU1">
+    <location xsi:type="RBACmodel:Point" label="A"/>
+  </c>
+  <c xsi:type="RBACmodel:SpatialContext" idContext="posU2">
+    <location xsi:type="RBACmodel:Point" label="A"/>
+  </c>
+  <c xsi:type="RBACmodel:SpatialContext" r1="//@r.0" idContext="spZone1">
+    <location xsi:type="RBACmodel:LogicalLocation" label="zoneL1"/>
+  </c>
+  <c xsi:type="RBACmodel:SpatialContext" idContext="posU3">
+    <location xsi:type="RBACmodel:Point"/>
+  </c>
+  <p roles="//@r.1" operations="//@op.0 //@op.1" idPermission="p1" object="//@Obj.0" permissionContextAssignment="//@c.1"/>
+  <p roles="//@r.0" operations="//@op.1" idPermission="p2" object="//@Obj.1"/>
+  <p roles="//@r.0 //@r.1" operations="//@op.2" idPermission="p3" object="//@Obj.2"/>
+  <r idRole="r2" users="//@u.2" permissions="//@p.1 //@p.2" roleContextAssignment="//@c.4"/>
+  <r idRole="r3" users="//@u.1 //@u.0" permissions="//@p.0 //@p.2"/>
+  <s idSession="s1" user="//@u.0"/>
+  <u idUser="u1" roles="//@r.1" sessions="//@s.0" userLocation="//@c.2"/>
+  <u idUser="u2" roles="//@r.1" userLocation="//@c.3"/>
+  <u idUser="u3" roles="//@r.0" userLocation="//@c.5"/>
+</RBACmodel:Root>

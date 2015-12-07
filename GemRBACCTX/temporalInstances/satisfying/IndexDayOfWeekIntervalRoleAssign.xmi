@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RBACmodel:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:RBACmodel="http://www.example.org/RBACmodel" xsi:schemaLocation="http://www.example.org/RBACmodel ../../model/RBACmodel.ecore">
+  <sys currentT="//@c.0/@timeexpression.0/@absolute.0" currentDay="//@c.0/@timeexpression.0/@relative.0"/>
+  <Obj idObject="obj1" permissions="//@p.0"/>
+  <Obj idObject="obj2" permissions="//@p.1"/>
+  <Obj idObject="obj3" permissions="//@p.2"/>
+  <op idOperation="op1" permissions="//@p.0"/>
+  <op idOperation="op2" permissions="//@p.0 //@p.1"/>
+  <op idOperation="op3" permissions="//@p.2"/>
+  <c xsi:type="RBACmodel:TemporalContext" idContext="currentT">
+    <timeexpression>
+      <absolute xsi:type="RBACmodel:TimePoint" idTimePoint="current" hour="8" day="1" month="5" year="2015"/>
+      <relative xsi:type="RBACmodel:DayOfWeek" idRelativeTE="current" idRelativeTimePoint="" rank="1" day="Thursday"/>
+    </timeexpression>
+  </c>
+  <c xsi:type="RBACmodel:TemporalContext" r1="//@r.0" idContext="T1">
+    <timeexpression>
+      <relative xsi:type="RBACmodel:MonthOfYear" idRelativeTE="April" overlay="//@c.1/@timeexpression.0/@relative.1" month="5"/>
+      <relative xsi:type="RBACmodel:RelativeTimeInterval">
+        <start xsi:type="RBACmodel:DayOfWeek" rank="1"/>
+        <end xsi:type="RBACmodel:DayOfWeek" rank="1" day="Friday"/>
+      </relative>
+    </timeexpression>
+  </c>
+  <c xsi:type="RBACmodel:SpatialContext" idContext="posU1">
+    <location xsi:type="RBACmodel:Point"/>
+  </c>
+  <c xsi:type="RBACmodel:SpatialContext" idContext="posU2">
+    <location xsi:type="RBACmodel:Point"/>
+  </c>
+  <p roles="//@r.0 //@r.1" operations="//@op.0 //@op.1" idPermission="p1" object="//@Obj.0"/>
+  <p roles="//@r.0" operations="//@op.1" idPermission="p2" object="//@Obj.1"/>
+  <p roles="//@r.1" operations="//@op.2" idPermission="p3" object="//@Obj.2"/>
+  <r idRole="r7" users="//@u.0" permissions="//@p.0 //@p.1" roleContextAssignment="//@c.1"/>
+  <r idRole="r3" users="//@u.1" permissions="//@p.0 //@p.2"/>
+  <u idUser="u1" roles="//@r.0" userLocation="//@c.2"/>
+  <u idUser="u2" roles="//@r.1" userLocation="//@c.3"/>
+</RBACmodel:Root>
