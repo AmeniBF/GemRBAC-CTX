@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/GemRBAC/src" modelPluginID="GemRBAC" modelName="GemRBAC"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>gemRBAC.ecore</foreignModel>
+  <genPackages prefix="GemRBAC" disposableProviderFactory="true" ecorePackage="gemRBAC.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gemRBAC.ecore#//TimeUnitType">
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//TimeUnitType/second"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//TimeUnitType/minute"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//TimeUnitType/hour"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//TimeUnitType/day"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//TimeUnitType/month"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//TimeUnitType/year"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gemRBAC.ecore#//DayType">
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//DayType/Monday"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//DayType/Tuesday"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//DayType/Wednesday"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//DayType/Thursday"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//DayType/Friday"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//DayType/Saturday"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//DayType/Sunday"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gemRBAC.ecore#//CardinalType">
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/North"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/East"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/South"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/West"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/Northeast"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/Southeast"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/Southwest"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//CardinalType/Northwest"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gemRBAC.ecore#//QualitativeType">
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//QualitativeType/inside"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//QualitativeType/outside"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//QualitativeType/around"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gemRBAC.ecore#//delegationType">
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//delegationType/grant"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//delegationType/strong"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//delegationType/weakStatic"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//delegationType/weakDynamic"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gemRBAC.ecore#//UnitType">
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//UnitType/metres"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//UnitType/kilometres"/>
+      <genEnumLiterals ecoreEnumLiteral="gemRBAC.ecore#//UnitType/miles"/>
+    </genEnums>
+    <genClasses ecoreClass="gemRBAC.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//User/idUser"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/roles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/sessions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/delegation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/recieveddelegation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/revocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/delegatedRoles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/userLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//User/userLog"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//User/assignRole">
+        <genParameters ecoreParameter="gemRBAC.ecore#//User/assignRole/r"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//User/accessHistory"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Role/idRole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/users"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Role/isDependent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Role/isStrong"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Role/isCascading"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/sessionsA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/sessionsE"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/permissions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/juniors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/seniors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/user"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/delegation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/roleContextAssignment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/roleContextEnabling"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/logRole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Role/enabledPermissions"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Role/getCurrentAbsoluteTE">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Role/getCurrentAbsoluteTE/u"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Role/assignPermission">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Role/assignPermission/p"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Role/accessHistory"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Role/logBOCurrentProcessInstance"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Role/getAlljuniors"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Session">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Session/idSession"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Session/activeRoles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Session/enabledRoles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Session/user"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Session/accessHistory"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Session/enableRole">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/enableRole/r"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Session/disableRole">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/disableRole/r"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Session/activateRole">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/activateRole/r"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Session/deactivateRole">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/deactivateRole/r"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Session/performOperation">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/performOperation/op"/>
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/performOperation/p"/>
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/performOperation/r"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Session/delegateRole">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Session/delegateRole/r"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Permission">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Permission/idPermission"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/roles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/object"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/delegation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/logPermission"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/permissionContextAssignment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/permissionContextEnabling"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Permission/rolesE"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Operation/idOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Operation/permissions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Operation/logOperation"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Operation/accessHistory"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Object">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Object/idObject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Object/permissions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Object/logObject"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Object/accessHistory"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//RBACContext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACContext/logContext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACContext/p1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACContext/p2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACContext/r1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACContext/r2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RBACContext/idContext"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RBACContext/checkAccess">
+        <genParameters ecoreParameter="gemRBAC.ecore#//RBACContext/checkAccess/c"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//TimeExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//TimeExpression/absolute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//TimeExpression/relative"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//TimeExpression/idTimeExpr"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//SpatialContext">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//SpatialContext/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//SpatialContext/location"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Delegation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Delegation/idDelegation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Delegation/isRevoked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Delegation/isTransfer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Delegation/isTotal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Delegation/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Delegation/endDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Delegation/delegatorUser"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Delegation/delegateUser"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Delegation/revokingUser"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Delegation/delegatedDelegation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Delegation/delegatedPermissions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Delegation/maxDepth"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Delegation/delegatedRole"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Delegation/revoke"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Delegation/getAbsoluteDelegationPath"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//History">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//History/idLog"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//History/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//History/object"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//History/op"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//History/permission"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//History/context"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//History/user"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/sys"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/obj"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/c"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/p"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/r"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/s"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/u"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/d"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/log"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/dur"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/period"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/rloc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/rd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/loc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/currentDay"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Root/currentT"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//RBACUtility">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RBACUtility/maxPermission"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RBACUtility/maxActiveRole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RBACUtility/maxRole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACUtility/businessTaskList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACUtility/boundedPermissions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACUtility/currentT"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RBACUtility/currentDay"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RBACUtility/getBoundPermission"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RBACUtility/getCurrentDate"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RBACUtility/getCurrentTime"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RBACUtility/getDayOfWeek"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RBACUtility/getCumulativeActiveDuration">
+        <genParameters ecoreParameter="gemRBAC.ecore#//RBACUtility/getCumulativeActiveDuration/r"/>
+        <genParameters ecoreParameter="gemRBAC.ecore#//RBACUtility/getCumulativeActiveDuration/u"/>
+        <genParameters ecoreParameter="gemRBAC.ecore#//RBACUtility/getCumulativeActiveDuration/duration"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RBACUtility/getActiveDuration">
+        <genParameters ecoreParameter="gemRBAC.ecore#//RBACUtility/getActiveDuration/r"/>
+        <genParameters ecoreParameter="gemRBAC.ecore#//RBACUtility/getActiveDuration/unit"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//AbsoluteTE">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//AbsoluteTE/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//AbsoluteTE/idAbsoluteTE"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//AbsoluteTE/hasDuration"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//RelativeTE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RelativeTE/idRelativeTE"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RelativeTE/d2"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//ActivationDuration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//ActivationDuration/idDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//ActivationDuration/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//ActivationDuration/timeUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//ActivationDuration/isContinous"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//ActivationDuration/aexp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//ActivationDuration/rexp"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//ActivationDuration/greaterThan">
+        <genParameters ecoreParameter="gemRBAC.ecore#//ActivationDuration/greaterThan/d"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//TimePoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//TimePoint/second"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//TimePoint/minute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//TimePoint/hour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//TimePoint/day"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//TimePoint/month"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//TimePoint/year"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//TimePoint/equalTo">
+        <genParameters ecoreParameter="gemRBAC.ecore#//TimePoint/equalTo/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//TimePoint/isBefore">
+        <genParameters ecoreParameter="gemRBAC.ecore#//TimePoint/isBefore/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//TimePoint/isAfter">
+        <genParameters ecoreParameter="gemRBAC.ecore#//TimePoint/isAfter/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//TimePoint/isContained">
+        <genParameters ecoreParameter="gemRBAC.ecore#//TimePoint/isContained/t"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//TimeInterval">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//TimeInterval/start"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//TimeInterval/end"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//ComposedRelativeTE">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//ComposedRelativeTE/overlay"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//ComposedRelativeTE/checkHours">
+        <genParameters ecoreParameter="gemRBAC.ecore#//ComposedRelativeTE/checkHours/u"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//ComposedRelativeTE/checkDays">
+        <genParameters ecoreParameter="gemRBAC.ecore#//ComposedRelativeTE/checkDays/u"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//ComposedRelativeTE/checkDaysRank">
+        <genParameters ecoreParameter="gemRBAC.ecore#//ComposedRelativeTE/checkDaysRank/u"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//ComposedRelativeTE/checkMonth">
+        <genParameters ecoreParameter="gemRBAC.ecore#//ComposedRelativeTE/checkMonth/u"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//RelativeTimeInterval">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RelativeTimeInterval/start"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RelativeTimeInterval/end"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//RelativeTimePoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RelativeTimePoint/rank"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RelativeTimePoint/isContained">
+        <genParameters ecoreParameter="gemRBAC.ecore#//RelativeTimePoint/isContained/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RelativeTimePoint/equalTo">
+        <genParameters ecoreParameter="gemRBAC.ecore#//RelativeTimePoint/equalTo/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RelativeTimePoint/isAfter">
+        <genParameters ecoreParameter="gemRBAC.ecore#//RelativeTimePoint/isAfter/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//RelativeTimePoint/isBefore">
+        <genParameters ecoreParameter="gemRBAC.ecore#//RelativeTimePoint/isBefore/t"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//DayOfWeek">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//DayOfWeek/day"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//DayOfMonth">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//DayOfMonth/day"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//DayOfMonth/month"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//MonthOfYear">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//MonthOfYear/month"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//HourOfDay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//HourOfDay/hour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//HourOfDay/minute"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//PeriodicTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//PeriodicTime/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//PeriodicTime/timeUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//PeriodicTime/idPeriodicTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//PeriodicTime/nextStart"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//RelativeLocation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RelativeLocation/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RelativeLocation/relativeLocID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RelativeLocation/distance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RelativeLocation/unit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RelativeLocation/relativedirection"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//Location">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Location/relativelocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Location/locationID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Location/label"/>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Location/disjoint">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Location/disjoint/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Location/contains">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Location/contains/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Location/overlaps">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Location/overlaps/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="gemRBAC.ecore#//Location/computeRelative">
+        <genParameters ecoreParameter="gemRBAC.ecore#//Location/computeRelative/r"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//PhysicalLocation"/>
+    <genClasses ecoreClass="gemRBAC.ecore#//LogicalLocation"/>
+    <genClasses ecoreClass="gemRBAC.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Point/long"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Point/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Point/alt"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Polygon">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Polygon/segment"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Circle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Circle/center"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//Circle/radius"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//Polyline">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Polyline/start"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//Polyline/end"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gemRBAC.ecore#//RelativeDirection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//RelativeDirection/relativelocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//RelativeDirection/idDirection"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//CardinalDirection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//CardinalDirection/direction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//CardinalDirection/angle"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//QualitativeDirection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gemRBAC.ecore#//QualitativeDirection/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="gemRBAC.ecore#//TemporalContext">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gemRBAC.ecore#//TemporalContext/timeexpression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

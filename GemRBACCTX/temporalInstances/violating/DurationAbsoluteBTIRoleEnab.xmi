@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gemRBAC:Root
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gemRBAC="http://www.example.org/gemRBAC">
+  <sys currentT="//@currentT"
+      currentDay="//@currentDay"/>
+  <obj idObject="obj1"
+      permissions="//@p.0"/>
+  <obj idObject="obj2"
+      permissions="//@p.1"/>
+  <obj idObject="obj3"
+      permissions="//@p.2"/>
+  <op idOperation="op1"
+      permissions="//@p.0"/>
+  <op idOperation="op2"
+      permissions="//@p.0 //@p.1"/>
+  <op idOperation="op3"
+      permissions="//@p.2"/>
+  <c xsi:type="gemRBAC:TemporalContext"
+      r2="//@r.0"
+      idContext="T1">
+    <timeexpression>
+      <absolute
+          xsi:type="gemRBAC:TimeInterval"
+          duration="//@dur.0"
+          idAbsoluteTE="interval1">
+        <start
+            idAbsoluteTE="start"
+            hour="8"
+            day="1"
+            month="1"
+            year="2015"/>
+        <end
+            idAbsoluteTE="end"
+            day="3"
+            month="3"
+            year="2017"/>
+      </absolute>
+    </timeexpression>
+  </c>
+  <c xsi:type="gemRBAC:SpatialContext"
+      idContext="posU1">
+    <location
+        xsi:type="gemRBAC:Point"/>
+  </c>
+  <c xsi:type="gemRBAC:SpatialContext"
+      idContext="posU2">
+    <location
+        xsi:type="gemRBAC:Point"/>
+  </c>
+  <p idPermission="p1"
+      roles="//@r.2"
+      operations="//@op.0 //@op.1"
+      object="obj1"/>
+  <p idPermission="p2"
+      roles="//@r.0 //@r.1"
+      operations="//@op.1"
+      object="obj2"/>
+  <p idPermission="p3"
+      roles="//@r.1 //@r.2"
+      operations="//@op.2"
+      object="obj3"/>
+  <r idRole="r1"
+      users="//@u.0"
+      sessionsE="//@s.0"
+      permissions="//@p.1"
+      roleContextEnabling="//@c.0"/>
+  <r idRole="r2"
+      users="//@u.1"
+      permissions="//@p.1 //@p.2"/>
+  <r idRole="r3"
+      users="//@u.1"
+      permissions="//@p.0 //@p.2"/>
+  <s idSession="s1"
+      enabledRoles="//@r.0"
+      user="//@u.0"/>
+  <u idUser="u1"
+      roles="//@r.0"
+      sessions="//@s.0"
+      userLocation="//@c.2"/>
+  <u idUser="u2"
+      roles="//@r.1 //@r.2"
+      userLocation="//@c.2"/>
+  <dur idDuration=""
+      value="3"
+      timeUnit="hour"
+      isContinous="true"
+      aexp="//@c.0/@timeexpression.0/@absolute.0"/>
+  <currentDay
+      idRelativeTE="currentD"/>
+  <currentT
+      idAbsoluteTE="currentT"
+      minute="34"
+      hour="13"
+      day="14"
+      month="9"
+      year="2015"/>
+</gemRBAC:Root>

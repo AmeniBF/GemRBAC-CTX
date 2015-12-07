@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gemRBAC:Root
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gemRBAC="http://www.example.org/gemRBAC">
+  <sys currentT="//@currentT"
+      currentDay="//@currentDay"/>
+  <obj idObject="obj1"
+      permissions="//@p.0"/>
+  <obj idObject="obj2"
+      permissions="//@p.1"/>
+  <obj idObject="obj3"
+      permissions="//@p.2"/>
+  <op idOperation="op1"
+      permissions="//@p.0"/>
+  <op idOperation="op2"
+      permissions="//@p.0 //@p.1"/>
+  <op idOperation="op3"
+      permissions="//@p.2"/>
+  <c xsi:type="gemRBAC:TemporalContext"
+      p1="//@p.3"
+      idContext="T1">
+    <timeexpression>
+      <relative
+          xsi:type="gemRBAC:RelativeTimeInterval"
+          idRelativeTE="hourInterval">
+        <start
+            xsi:type="gemRBAC:HourOfDay"
+            hour="10"/>
+        <end
+            xsi:type="gemRBAC:HourOfDay"
+            hour="15"/>
+      </relative>
+      <relative
+          xsi:type="gemRBAC:RelativeTimeInterval"
+          idRelativeTE="dayOfMonthInterval"
+          overlay="//@c.0/@timeexpression.0/@relative.0">
+        <start
+            xsi:type="gemRBAC:DayOfMonth"
+            day="1"
+            month="8"/>
+        <end
+            xsi:type="gemRBAC:DayOfMonth"
+            day="30"
+            month="10"/>
+      </relative>
+      <relative
+          xsi:type="gemRBAC:DayOfMonth"
+          overlay="//@c.0/@timeexpression.0/@relative.0"
+          day="1"
+          month="5"/>
+    </timeexpression>
+  </c>
+  <c xsi:type="gemRBAC:SpatialContext"
+      idContext="pos U1">
+    <location
+        xsi:type="gemRBAC:Point"/>
+  </c>
+  <c xsi:type="gemRBAC:SpatialContext"
+      idContext="pos U2">
+    <location
+        xsi:type="gemRBAC:Point"/>
+  </c>
+  <p idPermission="p1"
+      roles="//@r.0 //@r.1"
+      operations="//@op.0 //@op.1"
+      object="obj1"/>
+  <p idPermission="p2"
+      roles="//@r.0"
+      operations="//@op.1"
+      object="obj2"/>
+  <p idPermission="p3"
+      roles="//@r.1"
+      operations="//@op.2"
+      object="obj3"/>
+  <p idPermission="p5"
+      permissionContextAssignment="//@c.0"/>
+  <r idRole="r4"
+      users="//@u.1"
+      permissions="//@p.0 //@p.1"/>
+  <r idRole="r3"
+      users="//@u.1 //@u.0"
+      permissions="//@p.0 //@p.2"/>
+  <u idUser="u1"
+      roles="//@r.1"
+      userLocation="//@c.1"/>
+  <u idUser="u2"
+      roles="//@r.1 //@r.0"
+      userLocation="//@c.2"/>
+  <currentDay
+      idRelativeTE="currentD"/>
+  <currentT
+      idAbsoluteTE="currentT"
+      minute="34"
+      hour="13"
+      day="14"
+      month="9"
+      year="2015"/>
+</gemRBAC:Root>
